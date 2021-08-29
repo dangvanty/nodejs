@@ -5,7 +5,7 @@ const newController = require('../app/newscontroller/NewsController');
 
 // đọc tuyến đường từ trên xuống nên phải sắp xếp đường con trước
 
-router.use('/:slug', newController.show);
-router.use('/', newController.index);
+router.get('/:slug', newController.show);
+router.get('/', newController.index);
 
 module.exports = router;
